@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Images } from './images';
+import { Image } from './image.class';
 import { ImagesService } from './images.service';
 
 @Component({
@@ -14,11 +14,11 @@ import { ImagesService } from './images.service';
 export class AppComponent implements OnInit {
   // Initialize variables
   base = 0;
-  images: Images[];
+  images: Image[];
 
-  mainImage: Images;
-  nextImage: Images;
-  prevImage: Images;
+  mainImage: Image;
+  nextImage: Image;
+  prevImage: Image;
 
   // Adding imgService
   constructor(private imgService: ImagesService) { }

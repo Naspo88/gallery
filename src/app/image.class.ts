@@ -2,7 +2,7 @@
  * Created by robertominghi on 10/07/17.
  */
 
-export class Images {
+export class Image {
   constructor(
     public albumId: number,
     public id: number,

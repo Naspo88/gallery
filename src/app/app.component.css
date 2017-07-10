@@ -1,6 +1,7 @@
 .btn {
   min-width: 25%;
   padding: 15% 0;
+  cursor: pointer;
 }
 
 .btn:after {
