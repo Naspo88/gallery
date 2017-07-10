@@ -12,8 +12,7 @@ import { ImagesService } from './images.service';
 
 
 export class AppComponent implements OnInit {
-
-  title = 'Gallery';
+  // Initialize variables
   base = 0;
   images: Images[];
 
@@ -21,8 +20,10 @@ export class AppComponent implements OnInit {
   nextImage: Images;
   prevImage: Images;
 
+  // Adding imgService
   constructor(private imgService: ImagesService) { }
 
+  // Function that download allImages from the service
   getImages(): void {
     this.imgService.getAllImages().then( images => {
 
@@ -32,10 +33,12 @@ export class AppComponent implements OnInit {
     } );
   }
 
+  // Function that is invoked at the init of the application
   ngOnInit(): void {
     this.getImages();
   }
 
+  // Function that change the images to display
   showImages(id: number): void {
     this.mainImage = this.images[id];
     this.nextImage = (id + 1 < this.images.length) ? this.images[id + 1] : null;
@@ -43,12 +46,13 @@ export class AppComponent implements OnInit {
 
   }
 
+  // Function to go to the next image
   next(): void {
     this.base += 1;
-    console.log(this.base);
     this.showImages(this.base);
   }
 
+  // Function to go to the previous image
   prev(): void {
     this.base -= 1;
     this.showImages(this.base);
