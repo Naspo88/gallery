@@ -1,11 +1,30 @@
 .btn {
   min-width: 25%;
+  padding: 15% 0;
+}
+
+.btn:after {
+  content: ".";
+  visibility: hidden;
+}
+
+.btn img {
+  position: relative;
+  max-width: 100%;
 }
 
 .show {
-  min-width: 50%;
+  max-width: 50%;
 }
+
+.mainImage {
+  position: relative;
+  max-width: 100%;
+}
+
 
 .container div {
   float: left;
 }
+
+
