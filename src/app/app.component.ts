@@ -49,12 +49,14 @@ export class AppComponent implements OnInit {
   // Function to go to the next image
   next(): void {
     this.base += 1;
+    if (this.base >= this.images.length) this.base = this.images.length - 1;
     this.showImages(this.base);
   }
 
   // Function to go to the previous image
   prev(): void {
     this.base -= 1;
+    if (this.base <= 0) this.base = 0;
     this.showImages(this.base);
   }
 
