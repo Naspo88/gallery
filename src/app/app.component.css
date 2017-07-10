@@ -1,0 +1,11 @@
+.btn {
+  min-width: 25%;
+}
+
+.show {
+  min-width: 50%;
+}
+
+.container div {
+  float: left;
+}
